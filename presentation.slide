@@ -1,0 +1,95 @@
+# Go Hot Takes
+
+Carson Anderson
+DevX-O, Weave
+@carson_ops
+
+https://github.com/carsonoid/talk-lightning-go-bad-habits
+
+## This is a list of gripes!
+
+Many of the hot takes here are base don personal feelings. I will do my best to explain
+why I think they are bad ideas, but none are objectively wrong.
+
+
+## Mixed Use Structs
+
+> I already have this struct. I'll just add the client to it
+
+## Mixed Use Structs
+
+client.go
+
+.code mixed-structs.go /START CLIENT OMIT/,/END CLIENT OMIT/
+
+## Mixed Use Structs
+
+main.go
+
+.code mixed-structs.go /START SERVER OMIT/,/END SERVER OMIT/
+
+## Mixed Use Structs - Fixed
+
+main.go
+
+.code mixed-structs.go /START GOOD_SERVER OMIT/,/END GOOD_SERVER OMIT/
+
+## Package Pollution
+
+> I need a type/var/const for this function
+
+## Package Pollution
+
+.code package-pollution.go /START OMIT/,/END OMIT/
+
+## Package Pollution - Fixed
+
+.code package-pollution.go /START FIXED OMIT/,/END FIXED OMIT/
+
+## HTTP Handler Helpers
+
+> HTTP Handler responses feel obtuse, I can make it simpler!
+
+## HTTP Handler Helpers
+
+.code http-helpers.go /START HELPER OMIT/,/END HELPER OMIT/
+
+## HTTP Handler Helpers - Bug
+
+.code http-helpers.go /START BAD2 OMIT/,/END BAD2 OMIT/
+
+## HTTP Handler Helpers - Better
+
+.code http-helpers.go /START BAD OMIT/,/END BAD OMIT/
+
+## HTTP Handler Helpers - Fixed
+
+.code http-helpers.go /START FIXED OMIT/,/END FIXED OMIT/
+
+## HTTP Handler Helpers - Compromise
+
+.code http-helpers.go /START FIXED2 OMIT/,/END FIXED2 OMIT/
+
+## Assert Libraries
+
+> I don't like typing "if err != nil"
+
+## Assert Libraries
+
+.code assert.go /START OMIT/,/END OMIT/
+
+## Assert Libraries
+
+.code assert.go /START OMIT/,/END OMIT/
+
+## Assert Libraries
+
+.code assert.go /START BAD OMIT/,/END BAD OMIT/
+
+## Assert Libraries - Fixed
+
+.code assert.go /START FIXED1 OMIT/,/END FIXED1 OMIT/
+
+## Assert Libraries - Fixed
+
+.code assert.go /START FIXED2 OMIT/,/END FIXED2 OMIT/
