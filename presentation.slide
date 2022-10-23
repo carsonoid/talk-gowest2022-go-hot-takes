@@ -54,13 +54,13 @@ main.go
 
 .code http-helpers.go /START HELPER OMIT/,/END HELPER OMIT/
 
+## HTTP Handler Helpers
+
+.code http-helpers.go /START BAD OMIT/,/END BAD OMIT/
+
 ## HTTP Handler Helpers - Bug
 
 .code http-helpers.go /START BAD2 OMIT/,/END BAD2 OMIT/
-
-## HTTP Handler Helpers - Better
-
-.code http-helpers.go /START BAD OMIT/,/END BAD OMIT/
 
 ## HTTP Handler Helpers - Fixed
 

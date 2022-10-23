@@ -54,7 +54,7 @@ func GetUsers(r *http.Request, w http.ResponseWriter) {
 
 func GetUsers(r *http.Request, w http.ResponseWriter) {
 	h := NewHTTPHelper(w)
-	defer h.SendJSON()
+	defer h.SendJSON() // <--- this can cause problems
 
 	users, err := db.GetUsers()
 	if err != nil {
@@ -107,7 +107,7 @@ func GetUsers(r *http.Request, w http.ResponseWriter) {
 		return
 	}
 
-	SendJSON(w, http.StatusInternalServerError, http.StatusOK, users)
+	SendJSON(w, http.StatusOK, users)
 }
 
 // END FIXED2 OMIT
